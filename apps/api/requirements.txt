@@ -1,0 +1,35 @@
+# FastAPI & Server
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+pydantic>=2.9.2
+pydantic-settings>=2.6.0
+python-multipart>=0.0.12
+
+# Database & Spatial / Vector persistence
+sqlalchemy>=2.0.36
+asyncpg>=0.30.0
+psycopg2-binary>=2.9.10
+geoalchemy2>=0.16.0
+pgvector>=0.3.5
+alembic>=1.13.3
+
+# Asynchronous Task Queue
+celery>=5.4.0
+redis>=5.2.0
+
+# Storage & Utilities
+boto3>=1.35.40
+pillow>=11.0.0
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+requests>=2.32.3
+
+# AI & Embeddings
+sentence-transformers>=3.2.0
+numpy>=2.1.2
+
+# Testing & Quality
+pytest>=8.3.3
+pytest-asyncio>=0.24.0
+httpx>=0.27.2
+

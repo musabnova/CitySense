@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Tokens */
+  --color-brand-teal-dark: #0B6B61;
+  --color-brand-teal-light: #E1F2EF;
+  --color-brand-teal-hover: #08544C;
+  --color-brand-teal-border: #A8DADC;
+
+  /* Semantic Priority Tokens */
+  --color-priority-high-bg: #FCE8E2;
+  --color-priority-high-text: #C53030;
+  --color-priority-med-bg: #FEF3C7;
+  --color-priority-med-text: #B45309;
+  --color-priority-low-bg: #E6FFFA;
+  --color-priority-low-text: #0D9488;
+
+  /* Canvas & Neutral Tokens */
+  --color-canvas-bg: #F8FAFC;
+  --color-map-canvas-bg: #EAEFEA;
+  --color-slate-900: #1E293B;
+  --color-slate-600: #64748B;
+  --color-slate-200: #E2E8F0;
+
+  /* Geometry & Radii */
+  --radius-pill: 9999px;
+  --radius-xl: 24px;
+  --radius-lg: 16px;
+  --radius-md: 12px;
+
+  /* Elevation Shadows */
+  --shadow-subtle: 0px 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-floating: 0px 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-modal: 0px -4px 32px rgba(0, 0, 0, 0.12);
+
+  /* Global Z-Index Hierarchy */
+  --z-map: 1;
+  --z-pins: 5;
+  --z-floating: 10;
+  --z-popover: 50;
+  --z-modal: 100;
+}
+
+@theme {
+  --color-brand-teal-dark: var(--color-brand-teal-dark);
+  --color-brand-teal-light: var(--color-brand-teal-light);
+  --color-brand-teal-hover: var(--color-brand-teal-hover);
+  --color-brand-teal-border: var(--color-brand-teal-border);
+
+  --color-priority-high-bg: var(--color-priority-high-bg);
+  --color-priority-high-text: var(--color-priority-high-text);
+  --color-priority-med-bg: var(--color-priority-med-bg);
+  --color-priority-med-text: var(--color-priority-med-text);
+  --color-priority-low-bg: var(--color-priority-low-bg);
+  --color-priority-low-text: var(--color-priority-low-text);
+
+  --color-canvas-bg: var(--color-canvas-bg);
+  --color-map-canvas-bg: var(--color-map-canvas-bg);
+  --color-slate-900: var(--color-slate-900);
+  --color-slate-600: var(--color-slate-600);
+  --color-slate-200: var(--color-slate-200);
+
+  --font-sans: 'Inter', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  --radius-pill: var(--radius-pill);
+  --radius-xl: var(--radius-xl);
+  --radius-lg: var(--radius-lg);
+  --radius-md: var(--radius-md);
+
+  --shadow-subtle: var(--shadow-subtle);
+  --shadow-floating: var(--shadow-floating);
+  --shadow-modal: var(--shadow-modal);
+}
+
+/* Explicit Utility Classes for Typography Scale & Tokens */
+@utility text-display {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+@utility text-section {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+@utility text-subtitle {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+@utility text-body {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+@utility text-micro {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+@utility rounded-pill {
+  border-radius: 9999px;
+}
+
+@utility rounded-xl {
+  border-radius: 24px;
+}
+
+@utility rounded-lg {
+  border-radius: 16px;
+}
+
+@utility rounded-md {
+  border-radius: 12px;
+}
+
+@utility shadow-subtle {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+@utility shadow-floating {
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+@utility shadow-modal {
+  box-shadow: 0px -4px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Z-Index Hierarchy Utilities */
+@utility z-map {
+  z-index: 1;
+}
+
+@utility z-pins {
+  z-index: 5;
+}
+
+@utility z-floating {
+  z-index: 10;
+}
+
+@utility z-popover {
+  z-index: 50;
+}
+
+@utility z-modal {
+  z-index: 100;
+}
+

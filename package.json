@@ -1,0 +1,23 @@
+{
+  "name": "citysense-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "CitySense: AI-Powered Civic Impact Platform - From Complaints to Action",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "pnpm --filter web dev",
+    "build:web": "pnpm --filter web build",
+    "lint": "pnpm --filter web lint",
+    "test:web": "pnpm --filter web test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  }
+}

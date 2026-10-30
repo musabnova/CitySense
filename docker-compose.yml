@@ -1,0 +1,37 @@
+services:
+  citysense-db:
+    image: pgvector/pgvector:pg16
+    container_name: citysense-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: citysense
+      POSTGRES_PASSWORD: citysense_pass
+      POSTGRES_DB: citysense_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - citysense_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U citysense -d citysense_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  citysense-redis:
+    image: redis:7-alpine
+    container_name: citysense-redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - citysense_redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  citysense_pgdata:
+  citysense_redisdata:
+
