@@ -1,0 +1,39 @@
+
+> web@0.1.0 build C:\Users\ABID WALIKAR\Downloads\Project\apps\web
+> next build
+
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+   ▲ Next.js 15.5.28
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 5.6s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/7) ...
+   Generating static pages (1/7) 
+   Generating static pages (3/7) 
+   Generating static pages (5/7) 
+ ✓ Generating static pages (7/7)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS
+┌ ○ /                                     3.8 kB         107 kB
+├ ○ /_not-found                            987 B         104 kB
+├ ○ /dashboard                           10.3 kB         113 kB
+├ ○ /report                              6.09 kB         109 kB
+├ ○ /tasks                               6.08 kB         109 kB
+└ ƒ /track/[id]                          4.63 kB         107 kB
++ First Load JS shared by all             103 kB
+  ├ chunks/363-cde4ff967f64da43.js         46 kB
+  ├ chunks/d3dc8d93-0480a1acf2866ad1.js  54.2 kB
+  └ other shared chunks (total)          2.52 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
