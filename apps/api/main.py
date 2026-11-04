@@ -9,6 +9,8 @@ from apps.api.core.redis import check_redis_health
 from apps.api.routes.reports import router as reports_router
 from apps.api.routes.spatial import router as spatial_router
 from apps.api.routes.clusters import router as clusters_router
+from apps.api.routes.field import router as field_router
+from apps.api.services.mock_integrations import get_mock_integration_logs
 
 # Ensure tables are ready on boot
 Base.metadata.create_all(bind=engine)
@@ -52,10 +54,16 @@ def create_app() -> FastAPI:
     async def health_redis():
         return await check_redis_health()
 
+    @app.get("/api/v1/mock-integration-logs", tags=["Integrations"])
+    def mock_integration_logs():
+        """TASK-072: Returns chronological log of mock SMS and ERP integration events."""
+        return get_mock_integration_logs()
+
     # Mount Route Collections
     app.include_router(reports_router)
     app.include_router(spatial_router)
     app.include_router(clusters_router)
+    app.include_router(field_router)
 
     return app
 

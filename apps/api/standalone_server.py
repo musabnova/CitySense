@@ -762,9 +762,15 @@ class CitySenseApiHandler(http.server.BaseHTTPRequestHandler):
 
 
 def run_server(port=8000):
-    server = http.server.HTTPServer(("0.0.0.0", port), CitySenseApiHandler)
-    print(f"CitySense API Server listening on port {port}...")
-    server.serve_forever()
+    try:
+        import uvicorn
+        print(f"Starting unified authoritative CitySense FastAPI backend on port {port}...")
+        uvicorn.run("apps.api.main:app", host="0.0.0.0", port=port, reload=False)
+    except Exception as e:
+        print(f"FastAPI/Uvicorn fallback ({e}). Starting CitySense HTTP server on port {port}...")
+        server = http.server.HTTPServer(("0.0.0.0", port), CitySenseApiHandler)
+        print(f"CitySense API Server listening on port {port}...")
+        server.serve_forever()
 
 
 if __name__ == "__main__":
